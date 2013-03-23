@@ -3,16 +3,18 @@ users:
         groups:
         - Admin
 groups:
-    Default:
+    Member:
         permissions:
-            permissions.build: false
+            essentials.home:true
+            essentials.sethome:true
+            permissions.build: true
             essentials.spawn: true
             essentials.rules: true
             essentials.motd: true
             essentials.list: true
             essentials.helpop: true
             essentials.help: true
-    Builder:
+      Trusted:
         permissions:
             permissions.build: true
             essentials.afk: true
@@ -59,12 +61,13 @@ groups:
             essentials.warp.list: true
             essentials.worth: true
         inheritance:
-        - Default
+        - Member
     Moderator:
         permissions:
-            essentials.ban: true
+            essentials.chat.color:true
+            essentials.ban: false
             essentials.ban.notify: true
-            essentials.banip: true
+            essentials.banip: false
             essentials.broadcast: true
             essentials.clearinventory: true
             essentials.delwarp: true
